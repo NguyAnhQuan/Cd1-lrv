@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Nguyễn Anh Quân",
+        "major": "Công nghệ thông tin"
+    },
+    {
+        "id": 2,
+        "name": "Trần Văn Vũ",
+        "major": "Khoa học máy tính"
+    },
+    {
+        "id": 3,
+        "name": "Nguyễn Thị An Bình",
+        "major": "Hệ thống thông tin"
+    },
+    {
+        "id": 4,
+        "name": "Nguyễn Sỹ Quang",
+        "major": "Kỹ thuật phần mềm"
+    },
+    {
+        "id": 5,
+        "name": "Hoàng Minh Duy",
+        "major": "Mạng máy tính"
+    }
+]

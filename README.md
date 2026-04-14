@@ -1,59 +1,193 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# f_travel_BE — Ftravel Backend (Laravel) + Web (FE2)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Hệ thống **backend + API + web Laravel (FE2)** cho dự án Ftravel.
 
-## About Laravel
+- **FE1 (Flutter)** gọi **REST API** dưới tiền tố `/api`
+- **FE2 (Web Laravel)** cung cấp giao diện người dùng + trang quản trị (admin)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Mục lục
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- [Thông tin nhóm](#thông-tin-nhóm)
+- [Tính năng chính](#tính-năng-chính-đã-có-trong-code)
+- [Công nghệ sử dụng](#công-nghệ-sử-dụng)
+- [Cấu trúc thư mục](#cấu-trúc-thư-mục-rút-gọn)
+- [Yêu cầu môi trường](#yêu-cầu-môi-trường)
+- [Cài đặt nhanh (Local)](#cài-đặt-nhanh-local)
+- [Tài khoản demo (Seeder)](#tài-khoản-demo-seeder)
+- [Điền sẵn tài khoản khi test (Web login)](#điền-sẵn-tài-khoản-khi-test-web-login)
+- [Tài liệu API](#tài-liệu-api)
+- [Các script hữu ích](#các-script-hữu-ích)
+- [License](#license)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Thông tin nhóm
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+| STT | Họ và Tên          | MSSV     | Vị Trí      |
+| --- | ------------------ | -------- | ----------- |
+| 1   | Nguyễn Anh Quân    | 20220839 | Trưởng Nhóm |
+| 2   | Nguyễn Văn Vũ      | 20220844 | Thành Viên  |
+| 3   | Nguyễn Sỹ Quang    | 20220744 | Thành Viên  |
+| 4   | Nguyễn Thị An Bình | 20220997 | Thành Viên  |
+| 5   | Hoàng Minh Duy     | 20220794 | Thành Viên  |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Tính năng chính (đã có trong code)
 
-## Contributing
+### User (Web + API)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Trang chủ**: hero + tìm kiếm, gợi ý tour, ưu đãi nổi bật, điểm đến, vì sao chọn Ftravel
+- **Tour**: danh sách tour (lọc theo phạm vi/nội dung/ngày), chi tiết tour, gallery, lịch trình
+- **Voucher/Coupon**: xem coupon public, thu thập coupon, xem coupon của tôi (API)
+- **Đăng ký/Đăng nhập/Đăng xuất**: Web form + API (Sanctum)
+- **Hồ sơ cá nhân**: cập nhật hồ sơ, xoá tài khoản (API), cập nhật thông tin (Web)
+- **Booking/Checkout**: tạo đơn, xem đơn của tôi, thao tác thanh toán + VietQR (API)
 
-## Code of Conduct
+### Admin (Web + API)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Quản lý Tour**: CRUD
+- **Quản lý User**: cập nhật/xoá
+- **Quản lý Coupon**: CRUD
+- **Quản lý Role/Permission**: CRUD role, seed permission mặc định
+- **Quản lý Review**: duyệt/cập nhật
+- **Báo cáo**: dashboard/statistics, export CSV/PDF
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Công nghệ sử dụng
+
+- **PHP**: 8.2+
+- **Laravel**: 12.x
+- **Auth API**: Laravel Sanctum (Bearer token)
+- **DB**: **MySQL** (theo `.env` hiện tại của dự án)
+- **UI (Web FE2)**:
+  - CSS hiện tại: `public/css/web/`* (tokens/material-like)
+  - Icon: Bootstrap Icons (CDN)
+  - JS hiện tại: `public/js/web/app.js` (slider, hero search...)
+
+---
+
+## Cấu trúc thư mục (rút gọn)
+
+- **API routes**: `routes/api.php`
+- **Web routes**: `routes/web.php`
+- **Controllers**: `app/Http/Controllers/`*
+- **Views (Blade)**: `resources/views/web/`*, `resources/views/admin/*`
+- **Static assets**:
+  - CSS: `public/css/web/`*
+  - JS: `public/js/web/app.js`
+- **Seeder dữ liệu demo**: `database/seeders/FTravelSeeder.php`
+- **Tài liệu API**: `API-document.md`
+
+---
+
+## Yêu cầu môi trường
+
+- PHP 8.2+
+- Composer
+
+---
+
+## Cài đặt nhanh (Local)
+
+Trong thư mục `f_travel_BE`:
+
+### 1) Cài dependencies
+
+```bash
+composer install
+```
+
+### 2) Tạo file `.env`
+
+```bash
+copy .env.example .env
+php artisan key:generate
+```
+
+### 3) Chuẩn bị database
+
+Mặc định dùng **MySQL** theo `.env` hiện tại.
+
+```bash
+php artisan migrate --seed
+```
+
+Seeder sẽ tạo dữ liệu demo (tour/category/banner/coupon/booking mẫu tuỳ seed).
+
+### 4) Chạy server
+
+```bash
+php artisan serve
+```
+
+Mặc định: `http://127.0.0.1:8000`
+
+---
+
+## Tài khoản demo (Seeder)
+
+### User demo
+
+- **Email**: `test@gmail.com`
+- **Mật khẩu**: `12345678`
+
+### Admin demo
+
+- **Email**: `admin@ftravel.test`
+- **Mật khẩu**: `123456`
+
+---
+
+## Điền sẵn tài khoản khi test (Web login)
+
+Trong `.env` bạn có thể set để form đăng nhập web tự điền (giống FE1):
+
+```env
+DEMO_LOGIN_EMAIL=test@gmail.com
+DEMO_LOGIN_PASSWORD=12345678
+```
+
+Production nên để trống 2 biến này.
+
+---
+
+## Tài liệu API
+
+Xem chi tiết tại:
+
+- `API-document.md`
+
+Base URL local:
+
+- `http://127.0.0.1:8000/api`
+
+Một số endpoint yêu cầu Bearer token (Sanctum), ví dụ:
+
+```http
+Authorization: Bearer <token>
+Accept: application/json
+```
+
+---
+
+## Các script hữu ích
+
+### Composer scripts
+
+- `composer run test`: chạy test
+
+### Artisan
+
+- `php artisan optimize:clear`: xoá cache config/routes/views
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Dự án phục vụ mục đích học tập/nội bộ. Nếu cần công bố mã nguồn, hãy liên hệ 0962784293.

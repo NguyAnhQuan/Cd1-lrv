@@ -1,0 +1,175 @@
+.ft-catalog-layout {
+  display: grid;
+  gap: 24px;
+  padding: 20px 0 40px;
+}
+
+@media (min-width: 900px) {
+  .ft-catalog-layout {
+    grid-template-columns: 260px 1fr;
+    align-items: start;
+  }
+}
+
+.ft-filter-panel {
+  background: var(--color-surface-container-lowest);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-outline-variant);
+  padding: 16px;
+}
+
+.ft-filter-panel h3 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.ft-filter-panel .ft-form-group {
+  margin-bottom: 12px;
+}
+
+.ft-checkbox-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.ft-checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ft-catalog-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ft-tour-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .ft-tour-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ft-tour-card__img-wrap {
+  position: relative;
+}
+
+.ft-tour-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.ft-tour-card__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.ft-tour-card__body {
+  padding: 14px 16px 16px;
+}
+
+.ft-tour-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--color-on-surface-variant);
+  margin-bottom: 8px;
+}
+
+.ft-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.ft-pagination a,
+.ft-pagination span {
+  min-width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid var(--color-outline-variant);
+  background: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+}
+
+.ft-pagination a:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.ft-pagination .is-current {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.ft-detail-hero {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.ft-detail-hero img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.ft-detail-grid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .ft-detail-grid {
+    grid-template-columns: 1fr 320px;
+  }
+}
+
+.ft-itinerary {
+  border-left: 3px solid var(--color-primary-container);
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+.ft-gallery {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.ft-gallery img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ft-sticky-book {
+  position: sticky;
+  top: 88px;
+}

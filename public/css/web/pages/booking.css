@@ -1,0 +1,40 @@
+.ft-checkout-steps {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.ft-checkout-step {
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-container-high);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-on-surface-variant);
+}
+
+.ft-checkout-step.is-active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.ft-qr-box {
+  text-align: center;
+  padding: 20px;
+  background: var(--color-surface-container-high);
+  border-radius: var(--radius-card);
+  margin-top: 16px;
+}
+
+.ft-qr-box img {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.ft-booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}

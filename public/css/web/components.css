@@ -1,0 +1,221 @@
+.ft-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  border: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--dur-1) var(--ease-out), box-shadow var(--dur-2) var(--ease-out),
+    background var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out),
+    color var(--dur-2) var(--ease-out), opacity var(--dur-1) var(--ease-out);
+}
+
+.ft-btn:hover {
+  text-decoration: none;
+  opacity: 0.96;
+}
+
+.ft-btn:active {
+  transform: scale(0.98);
+}
+
+.ft-btn:focus-visible {
+  outline: 3px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+.ft-btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.ft-btn--primary:hover {
+  box-shadow: var(--shadow-soft);
+}
+
+.ft-btn--secondary {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+.ft-btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.ft-btn--outline:hover {
+  background: rgba(0, 61, 124, 0.06);
+}
+
+.ft-btn--ghost {
+  background: rgba(0, 61, 124, 0.08);
+  color: var(--color-primary);
+}
+
+.ft-btn--sm {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.ft-card {
+  background: var(--color-surface-container-lowest);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out),
+    border-color var(--dur-2) var(--ease-out);
+}
+
+.ft-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(194, 198, 211, 0.28);
+}
+
+.ft-card:focus-within {
+  border-color: rgba(0, 61, 124, 0.35);
+  box-shadow: 0 0 0 4px rgba(0, 61, 124, 0.10), var(--shadow-soft);
+}
+
+.ft-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ft-badge--hot {
+  background: #ffe4e4;
+  color: #c62828;
+}
+
+.ft-badge--bestseller {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.ft-badge--newest {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.ft-form-group {
+  margin-bottom: 14px;
+}
+
+.ft-form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--color-on-surface-variant);
+}
+
+.ft-input,
+.ft-select,
+.ft-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--color-outline-variant);
+  background: var(--color-surface-container-lowest);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.ft-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.ft-input:focus,
+.ft-select:focus,
+.ft-textarea:focus {
+  outline: 3px solid var(--color-ring);
+  outline-offset: 0;
+  border-color: var(--color-primary);
+}
+
+.ft-error {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.ft-alert {
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.ft-alert--success {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.ft-alert--error {
+  background: var(--color-error-container);
+  color: #410002;
+}
+
+.ft-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-outline-variant);
+  background: var(--color-surface-container-lowest);
+}
+
+.ft-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.ft-table th,
+.ft-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.ft-table th {
+  background: var(--color-surface-container-high);
+  font-weight: 700;
+}
+
+.ft-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ft-pill-filter {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.ft-pill-filter a {
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-container-high);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-on-surface-variant);
+  text-decoration: none;
+}
+
+.ft-pill-filter a.is-active {
+  background: var(--color-primary);
+  color: #fff;
+}
